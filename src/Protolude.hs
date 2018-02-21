@@ -9,6 +9,7 @@
 module Protolude (
   module X,
   module Base,
+  id, 
   identity,
   map,
   uncons,
@@ -35,17 +36,19 @@ module Protolude (
 
 -- Protolude module exports.
 import Debug as X
-import Protolude.List as X
-import Protolude.Show as X
-import Protolude.Bool as X
-import Protolude.Monad as X
-import Protolude.Functor as X
-import Protolude.Either as X
 import Protolude.Applicative as X
+import Protolude.Bool as X
 import Protolude.Conv as X
-import Protolude.Panic as X
+import Protolude.Either as X
 import Protolude.Exceptions as X
+import Protolude.Functor as X
+import Protolude.List as X
+import Protolude.Monad as X
+import Protolude.Monoid as X
+import Protolude.Networking as X
+import Protolude.Panic as X
 import Protolude.Semiring as X
+import Protolude.Show as X
 
 import Protolude.Base as Base hiding (
     putStr           -- Overriden by Show.putStr
@@ -560,6 +563,9 @@ x & f = f x
 
 identity :: a -> a
 identity x = x
+
+id :: a -> a
+id x = x
 
 map :: Functor f => (a -> b) -> f a -> f b
 map = fmap

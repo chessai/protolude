@@ -42,8 +42,7 @@ import GHC.Exts as X (
   , FunPtr
   )
 import GHC.Base as X (
-    (++)
-  , seq
+    seq
   , asTypeOf
   , ord
   , maxInt
