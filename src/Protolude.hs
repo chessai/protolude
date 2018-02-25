@@ -45,7 +45,6 @@ import Protolude.Functor as X
 import Protolude.List as X
 import Protolude.Monad as X
 import Protolude.Monoid as X
-import Protolude.Networking as X
 import Protolude.Panic as X
 import Protolude.Semiring as X
 import Protolude.Show as X

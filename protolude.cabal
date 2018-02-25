@@ -13,18 +13,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 bug-reports:         https://github.com/sdiehl/protolude/issues
 tested-with:         
-  GHC == 7.6.1,
-  GHC == 7.6.2,
-  GHC == 7.6.3,
-  GHC == 7.8.1,
-  GHC == 7.8.2,
-  GHC == 7.8.3,
-  GHC == 7.8.4,
-  GHC == 7.10.1,
-  GHC == 7.10.2,
-  GHC == 7.10.3,
-  GHC == 8.0.1,
-  GHC == 8.2.1
+  GHC == 8.2.2
 
 description:
     A sensible set of defaults for writing custom Preludes.
@@ -37,21 +26,22 @@ library
     Protolude
     Unsafe
     Debug
-    Protolude.Exceptions
-    Protolude.Base
     Protolude.Applicative
+    Protolude.Base
+    Protolude.Bifunctor
     Protolude.Bool
-    Protolude.List
-    Protolude.Monad
-    Protolude.Show
+    Protolude.CallStack
     Protolude.Conv
     Protolude.Either
-    Protolude.Functor
-    Protolude.Semiring
-    Protolude.Bifunctor
-    Protolude.CallStack
     Protolude.Error
+    Protolude.Exceptions
+    Protolude.Functor
+    Protolude.List
+    Protolude.Monad
+    Protolude.Monoid 
     Protolude.Panic
+    Protolude.Semiring
+    Protolude.Show
 
   default-extensions:
     NoImplicitPrelude
@@ -64,27 +54,22 @@ library
     -fwarn-implicit-prelude
 
   build-depends:       
-    base                >= 4.6  && <4.11,
-    array               >= 0.4  && <0.6,
-    ghc-prim            >= 0.3  && <0.6,
-    async               >= 2.0  && <2.3,
-    deepseq             >= 1.3  && <1.5,
-    containers          >= 0.5  && <0.6,
-    hashable            >= 1.2  && <1.3,
-    transformers        >= 0.2  && <0.6,
-    text                >= 1.2  && <1.3,
-    stm                 >= 2.4  && <2.5,
-    bytestring          >= 0.10 && <0.11,
-    mtl                 >= 2.1  && <2.3,
-    mtl-compat          >= 0.2  && <0.3,
-    transformers-compat >= 0.4  && <0.6,
-
-  if impl(ghc >= 7.8.0)
-    build-depends:
-      safe             >= 0.3  && <0.4
-  else
-    build-depends:
-      safe             >= 0.3  && <0.3.10
-
+      base                
+    , array               
+    , async               
+    , bytestring          
+    , containers          
+    , deepseq             
+    , ghc-prim            
+    , hashable            
+    , ip 
+    , mtl                 
+    , mtl-compat          
+    , safe                
+    , stm                 
+    , transformers        
+    , text                
+    , transformers-compat 
+  
   hs-source-dirs:      src
   default-language:    Haskell2010
